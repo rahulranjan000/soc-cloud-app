@@ -43,7 +43,7 @@ def load_model(model_path):
 
 def main() -> None:
     st.header("Predict Battery State of Charge :battery: :bar_chart:")
-    
+    """
     st.sidebar.markdown(side_intro, unsafe_allow_html=True)
     st.sidebar.subheader(":gear: App Options")
     selected_model = st.sidebar.selectbox("Select pre-trained model", list_saved_models(saved_models_path))
@@ -82,7 +82,7 @@ def main() -> None:
     if dataset.empty:
         st.error('Could not read file {}!'.format(uploaded_data), icon="🚨")
         st.stop()
-    
+    """
     with st.expander("Explore Processed Data"):
         st.markdown("### Chart")
         fig, axes = plt.subplots(5)
